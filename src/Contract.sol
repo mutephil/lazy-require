@@ -13,6 +13,7 @@ contract Contract {
     function native_require(bool pass) public {
         require(pass, "this is an error");
     }
+
     function memory_require(bool pass) public {
         string memory error = "this is an error";
         require(pass, error);

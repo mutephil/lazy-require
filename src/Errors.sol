@@ -10,5 +10,4 @@ contract Errors is IError{
     function get_error() external view returns (string memory) {
         return ERROR;
     }
-
 }

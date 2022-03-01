@@ -27,6 +27,7 @@ contract ContractTest is DSTest {
     function testFailCallbackRequire() public {
         dummy.callback_require(true);
     }
+
     function testFailManualRevert() public {
         dummy.callback_require(true);
     }
@@ -42,10 +43,8 @@ contract ContractTest is DSTest {
     function testCallbackRequire() public {
         dummy.callback_require(false);
     }
+
     function testManualRevert() public {
         dummy.callback_require(false);
     }
-
-
-
 }
