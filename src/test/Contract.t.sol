@@ -21,6 +21,10 @@ contract ContractTest is DSTest {
         dummy.native_require(false);
     }
 
+    function testFailNativeCallbackRequire() public {
+        dummy.native_callback_require(false);
+    }
+
     function testFailMemoryRequire() public {
         dummy.memory_require(false);
     }
@@ -35,6 +39,10 @@ contract ContractTest is DSTest {
 
     function testNativeRequire() public {
         dummy.native_require(true);
+    }
+
+    function testNativeCallbackRequire() public {
+        dummy.native_callback_require(true);
     }
 
     function testMemoryRequire() public {

@@ -18,6 +18,10 @@ contract Contract {
         require(pass, "this is an error");
     }
 
+    function native_callback_require(bool pass) public {
+        require(pass, ERROR);
+    }
+
     function memory_require(bool pass) public {
         string memory error = "this is an error";
         require(pass, error);
