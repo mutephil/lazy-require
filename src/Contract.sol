@@ -2,8 +2,11 @@
 pragma solidity 0.8.10;
 
 import {IError} from "./interfaces/IError.sol";
+import "./libraries/Errors.sol";
 
 contract Contract {
+
+    
 
     string public constant ERROR = "this is an error";
 
@@ -18,8 +21,12 @@ contract Contract {
         require(pass, "this is an error");
     }
 
+    function manual_revert(bool fail) public {
+        if (fail) revert("this is an error");
+    }
+
     function native_callback_require(bool pass) public {
-        require(pass, ERROR);
+        require(pass, Errors.get_error());
     }
 
     function memory_require(bool pass) public {
@@ -28,11 +35,8 @@ contract Contract {
     }
 
     function callback_require(bool fail) public {
-        if (fail) revert(ERROR);
+        if (fail) revert(Errors.error);
     }
 
-    function manual_revert(bool fail) public {
-        if (fail) revert(ERROR);
-    }
 
 }
