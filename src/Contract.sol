@@ -35,7 +35,7 @@ contract Contract {
     }
 
     function callback_require(bool fail) public {
-        if (fail) revert(Errors.error);
+        if (fail) revert(Errors.an_error);
     }
 
 
