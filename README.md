@@ -4,8 +4,9 @@ from a software engineering point, these messages are typically needed to be cop
 
 wouldnt it make more sense if the test could call upon the contract for the error message? (ie `contract.ERROR_FOR_SOMETHING()`)
 
-after this experiment its i would guess becuase its gas optimal to store the error in raw string in the require. Although success of conditions are fairly close from tested conditions, failures spent ~40% more gas. situtationaly, this extrae gas on failure for software maintance may be worthwhile. 
+after this experiment its i would guess becuase its gas optimal to store the error in raw string in the require. Although success of conditions are fairly close from tested conditions, failures spent ~40% more gas. situtationaly, this extra gas on failure for software maintance may be worthwhile. 
 
+ps callback use is not truthful as current implementation stands
 
 to-investigate:
 - [ ] larger message strings
