@@ -1,6 +1,8 @@
 curious about why most error messages always in raw string in their respective requires.
 
-from a software engineering point, these messages are typically needed to be copied into test code that looks for reverts under specific conditions. 
+currently, `require(bool, string memory)` curious about the gas impact on an alternative parameter list to allow a callback function to only execute and get error message when needed.  
+
+from a software engineering point, these messages are typically needed to be copied into test code that looks for reverts under specific conditions. seems odd to me that errors are not programmably accessible per contract. 
 
 wouldnt it make more sense if the test could call upon the contract for the error message? (ie `contract.ERROR_FOR_SOMETHING()`)
 
