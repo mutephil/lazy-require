@@ -9,11 +9,12 @@ import {Errors} from "../Errors.sol";
 contract ContractTest is DSTest {
 
     Contract dummy;
-    Errors errors;
+    //Errors errors;
 
     function setUp() public {
-        errors = new Errors();
-        dummy = new Contract(address(errors));
+        //errors = new Errors();
+        //dummy = new Contract(address(errors));
+        dummy = new Contract();
     }
 
     function testFailNativeRequire() public {
