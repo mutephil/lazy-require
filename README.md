@@ -14,3 +14,4 @@ to-investigate:
 - [ ] larger message strings
 - [ ] proper diamond proxy style
 - [ ] functions with more compute / gas need
+- [ ] using libraries to store errors
